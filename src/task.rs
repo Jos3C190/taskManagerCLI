@@ -1,5 +1,7 @@
 use chrono::Local;
+use serde::{Serialize, Deserialize};
 
+#[derive(Serialize, Deserialize)]
 pub struct Task {
     pub name: String,
     pub description: String,
