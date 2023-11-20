@@ -72,12 +72,12 @@ fn process_add(manager: &mut TaskManager, add_matches: &clap::ArgMatches) {
 }
 
 fn process_mark(manager: &mut TaskManager, mark_matches: &clap::ArgMatches) {
-    let index = mark_matches.get_one::<String>("index").unwrap().parse::<usize>().expect("Índice inválido");
+    let index = mark_matches.get_one::<String>("index").unwrap().parse::<usize>().expect("Invalid index");
     manager.mark_task_completed(index);
 }
 
 fn process_delete(manager: &mut TaskManager, delete_matches: &clap::ArgMatches) {
-    let index = delete_matches.get_one::<String>("index").unwrap().parse::<usize>().expect("Índice inválido");
+    let index = delete_matches.get_one::<String>("index").unwrap().parse::<usize>().expect("Invalid index");
     manager.delete_task(index);
 }
 
